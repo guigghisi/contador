@@ -1,10 +1,13 @@
+.containerBackground {
+  background-image: url(../public/image1.jpg);
+}
 .container {
   animation-name: fundoDinamico;
   /* Tempo total da animação animação */
   animation-duration: 240s;
 
-/* Imagem estática sem animação */
-  background-image: url(../public/image1.jpg);
+  /* Imagem estática sem animação */
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -32,7 +35,7 @@
   }
 }
 .logos {
-  background-color: rgba(0, 0, 0, 0.600);
+  background-color: rgba(0, 0, 0, 0.6);
 
   display: flex;
   flex-direction: column;
@@ -45,7 +48,7 @@
   height: 25%;
 }
 .center {
-  background-color: rgba(0, 0, 0, 0.600);
+  background-color: rgba(0, 0, 0, 0.6);
 
   display: flex;
   flex-direction: column;
@@ -58,7 +61,7 @@
   text-align: center;
 }
 .right {
-  background-color: rgba(0, 0, 0, 0.600);
+  background-color: rgba(0, 0, 0, 0.6);
 
   display: flex;
   flex-direction: column;

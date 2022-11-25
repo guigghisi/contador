@@ -15,7 +15,7 @@ function App() {
     "25 Nov 2022 09:41:00",
     "25 Nov 2022 10:06:00",
     "25 Nov 2022 11:30:00",
-    "25 Nov 2022 17:00:00",
+    "25 Nov 2022 17:30:00",
     "1 jan 2999 00:00:01",
   ];
   //Troca a cidade
@@ -93,46 +93,47 @@ function App() {
   }, [quantidadePassada, quantidade, indexAtual, teste]);
 
   return (
-    <div className="container">
-      <div className="logos">
-        
-        <img src="logo1.png" alt="logo1" />
-        <img src="logo2.png" alt="logo2" />
-        <img src="logo3.png" alt="logo3" />
-        <img src="logo4.png" alt="logo4" />
-      </div>
-      <div className="center">
-        <div>
-          <h1>{cidade}</h1>
-          <h3>
-            {dataAtual.getDate()} de {meses[dataAtual.getMonth()]} de{" "}
-            {dataAtual.getFullYear()}
-          </h3>
+    <div className="containerBackground">
+      <div className="container">
+        <div className="logos">
+          <img src="logo1.png" alt="logo1" />
+          <img src="logo2.png" alt="logo2" />
+          <img src="logo3.png" alt="logo3" />
+          <img src="logo4.png" alt="logo4" />
         </div>
-        <div>
-          {" "}
+        <div className="center">
+          <div>
+            <h1>{cidade}</h1>
+            <h3>
+              {dataAtual.getDate()} de {meses[dataAtual.getMonth()]} de{" "}
+              {dataAtual.getFullYear()}
+            </h3>
+          </div>
+          <div>
+            {" "}
+            <h2>
+              Já estamos com <br /> {calculoDia} Dias {calculoHora} Horas{" "}
+              {calculoMinuto} Minutos {calculoSegundo} Segundos
+            </h2>
+          </div>
+          <div>
+            <h3>
+              {dataAtual.getHours()}:{dataAtual.getMinutes()}:
+              {dataAtual.getSeconds()}
+            </h3>
+          </div>
+        </div>
+        <div className="right">
           <h2>
-            Já estamos com <br /> {calculoDia} Dias {calculoHora} Horas{" "}
-            {calculoMinuto} Minutos {calculoSegundo} Segundos
+            Até agora emitimos <br />
+            {calculoTaxaCarbono.toFixed(2).replace(".", ",")} <br />
+            toneladas de carbono
+          </h2>
+          <h2>
+            Para neutralizar plantamos <br /> {Math.round(calculoArvore)} <br />{" "}
+            mudas de árvores
           </h2>
         </div>
-        <div>
-          <h3>
-            {dataAtual.getHours()}:{dataAtual.getMinutes()}:
-            {dataAtual.getSeconds()}
-          </h3>
-        </div>
-      </div>
-      <div className="right">
-        <h2>
-          Até agora emitimos <br />
-          {calculoTaxaCarbono.toFixed(2).replace(".", ",")} <br />
-          toneladas de carbono
-        </h2>
-        <h2>
-          Para neutralizar plantamos <br /> {Math.round(calculoArvore)} <br />{" "}
-          mudas de árvores
-        </h2>
       </div>
     </div>
   );
