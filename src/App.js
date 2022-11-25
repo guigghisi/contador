@@ -37,14 +37,14 @@ function App() {
   const [quantidadePassada, setQuantidadePassada] = useState(0);
 
   let dataAtual = new Date();
-  var calculoTaxaCarbono = 0;
-  var calculoArvore = 0;
+
   var calculo = parseInt(quantidade);
   var calculoDia = parseInt(calculo / 86400);
   var calculoHora = parseInt((calculo % 86400) / 3600);
   var calculoMinuto = parseInt(((calculo % 86400) % 3600) / 60);
   var calculoSegundo = parseInt(((calculo % 86400) % 3600) % 60);
-
+  var calculoTaxaCarbono = (calculo / 60) * 0.0263;
+  var calculoArvore = (calculo / 60) * 0.1517;
   function calcular() {
     if (
       dataAtual.getTime() > new Date(dataInicial[indexAtual]).getTime() &&
@@ -116,8 +116,15 @@ function App() {
         </div>
       </div>
       <div className="right">
-        <h2>Até agora emitimos <br/>{calculoTaxaCarbono}  toneladas</h2>
-        <h2>Para neutralizar plantaremos <br/> {calculoArvore} árvores</h2>
+        <h2>
+          Até agora emitimos <br />
+          {calculoTaxaCarbono.toFixed(2).replace(".", ",")} <br />
+          toneladas de carbono
+        </h2>
+        <h2>
+          Para neutralizar plantamos <br /> {Math.round(calculoArvore)} <br />{" "}
+          mudas de árvores
+        </h2>
       </div>
     </div>
   );
