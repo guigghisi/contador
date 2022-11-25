@@ -2,19 +2,23 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
+  //seta a data inicial (deixa a ultima data como 1 jan 2999 00:00:00)
   const dataInicial = [
     "24 Nov 2022 00:00:00",
     "25 Nov 2022 09:41:00",
     "25 Nov 2022 11:04:00",
+    "25 Nov 2022 16:00:00",
     "1 jan 2999 00:00:00",
   ];
+  //seta a data final (deixa a ultima data como 1 jan 2999 00:00:01)
   const dataFinal = [
     "25 Nov 2022 09:41:00",
     "25 Nov 2022 10:06:00",
     "25 Nov 2022 11:30:00",
+    "25 Nov 2022 17:00:00",
     "1 jan 2999 00:00:01",
   ];
-
+  //Troca a cidade
   const cidade = "Chapecó - SC";
 
   const meses = [
@@ -44,7 +48,7 @@ function App() {
   var calculoMinuto = parseInt(((calculo % 86400) % 3600) / 60);
   var calculoSegundo = parseInt(((calculo % 86400) % 3600) % 60);
   var calculoTaxaCarbono = (calculo / 60) * 0.0263;
-  var calculoArvore = (calculo / 60) * 0.1517;
+  var calculoArvore = (calculo / 390) * 1;
   function calcular() {
     if (
       dataAtual.getTime() > new Date(dataInicial[indexAtual]).getTime() &&
@@ -82,16 +86,20 @@ function App() {
   }, 1000);
   useEffect(() => {
     calcular();
+    if (teste === 60) {
+      setTeste(0);
+    }
     // eslint-disable-next-line
   }, [quantidadePassada, quantidade, indexAtual, teste]);
 
   return (
     <div className="container">
       <div className="logos">
-        <img src="logo.png" alt="logo1" />
-        <img src="logo.png" alt="logo2" />
-        <img src="logo.png" alt="logo3" />
-        <img src="logo.png" alt="logo4" />
+        
+        <img src="logo1.png" alt="logo1" />
+        <img src="logo2.png" alt="logo2" />
+        <img src="logo3.png" alt="logo3" />
+        <img src="logo4.png" alt="logo4" />
       </div>
       <div className="center">
         <div>
