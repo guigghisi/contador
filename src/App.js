@@ -8,6 +8,7 @@ function App() {
     "25 Nov 2022 09:41:00",
     "25 Nov 2022 11:04:00",
     "25 Nov 2022 16:00:00",
+      "24 Jul 2023 00:00:00",
     "1 jan 2999 00:00:00",
   ];
   //seta a data final (deixa a ultima data como 1 jan 2999 00:00:01)
@@ -16,6 +17,7 @@ function App() {
     "25 Nov 2022 10:06:00",
     "25 Nov 2022 11:30:00",
     "25 Nov 2022 17:30:00",
+    "26 Jul 2023 00:00:00",
     "1 jan 2999 00:00:01",
   ];
   //Troca a cidade
@@ -98,8 +100,7 @@ function App() {
         <div className="logos">
           <img src="logo1.png" alt="logo1" />
           <img src="logo2.png" alt="logo2" />
-          <img src="logo3.png" alt="logo3" />
-          <img src="logo4.png" alt="logo4" />
+
         </div>
         <div className="center">
           <div>
@@ -109,12 +110,22 @@ function App() {
               {dataAtual.getFullYear()}
             </h3>
           </div>
+          <div className="info">
+            <p>
+              Até agora emitimos <br />
+              {calculoTaxaCarbono.toFixed(2).replace(".", ",")} <br />
+              toneladas de carbono
+            </p>
+            <p>
+              Para neutralizar plantamos <br /> {Math.round(calculoArvore)} <br />{" "}
+              mudas de árvores
+            </p>
+          </div>
           <div>
-            {" "}
-            <h2>
-              Já estamos com <br /> {calculoDia} Dias {calculoHora} Horas{" "}
-              {calculoMinuto} Minutos {calculoSegundo} Segundos
-            </h2>
+            <p>
+              Já estamos com <br /><b> {calculoDia} Dias {calculoHora} Horas{" "}
+              {calculoMinuto} Minutos {calculoSegundo} Segundos</b> <br/> de evento
+            </p>
           </div>
           <div>
             <h3>
@@ -123,16 +134,9 @@ function App() {
             </h3>
           </div>
         </div>
-        <div className="right">
-          <h2>
-            Até agora emitimos <br />
-            {calculoTaxaCarbono.toFixed(2).replace(".", ",")} <br />
-            toneladas de carbono
-          </h2>
-          <h2>
-            Para neutralizar plantamos <br /> {Math.round(calculoArvore)} <br />{" "}
-            mudas de árvores
-          </h2>
+        <div className="right" className="logos">
+          <img src="logo3.png" alt="logo3" />
+          <img src="logo4.png" alt="logo4" />
         </div>
       </div>
     </div>

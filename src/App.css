@@ -45,7 +45,7 @@
   align-items: center;
 }
 .logos img {
-  height: 25%;
+  height: 50%;
 }
 .center {
   background-color: rgba(0, 0, 0, 0.6);
@@ -59,6 +59,15 @@
   width: 50vw;
   height: 100vh;
   text-align: center;
+}
+.info{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.info p{
+  margin-left: 80px;
+  font-size: 35px;
 }
 .right {
   background-color: rgba(0, 0, 0, 0.6);
