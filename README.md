@@ -1,3 +1,15 @@
+Descrever o que é o projeto e o que ele faz.
+
+# Projeto
+
+Este projeto é um exemplo de como hospedar um site React usando o servidor web Apache.
+
+## Funcionalidades
+
+- Hospeda um site React usando o servidor web Apache.
+- Fornece instruções passo a passo para compilar o aplicativo React, transferir arquivos para o servidor e configurar o Apache.
+- Permite acessar o aplicativo React em um navegador usando um nome de domínio configurado.
+
 # Hospedando um Site React com Apache
 
 Este guia fornece instruções passo a passo sobre como hospedar um site React usando o servidor web Apache.
