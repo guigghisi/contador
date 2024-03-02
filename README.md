@@ -1,5 +1,3 @@
-Descrever o que é o projeto e o que ele faz.
-
 # Projeto
 
 Este projeto é um exemplo de como hospedar um site React usando o servidor web Apache.
